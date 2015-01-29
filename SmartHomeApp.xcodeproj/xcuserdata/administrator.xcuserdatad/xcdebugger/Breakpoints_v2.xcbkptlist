@@ -15,6 +15,36 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "3"
             endingLineNumber = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SmartHomeApp.MenuVC.__deallocating_deinit"
+                  moduleName = "SmartHomeApp"
+                  urlString = "file:///Users/administrator/Desktop/SmartHomeApps/SmartHomeApp/SmartHomeApp/MenuVC.swift"
+                  timestampString = "444150649.04854"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc SmartHomeApp.MenuVC.__ivar_destroyer"
+                  moduleName = "SmartHomeApp"
+                  urlString = "file:///Users/administrator/Desktop/SmartHomeApps/SmartHomeApp/SmartHomeApp/MenuVC.swift"
+                  timestampString = "444150649.048786"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
