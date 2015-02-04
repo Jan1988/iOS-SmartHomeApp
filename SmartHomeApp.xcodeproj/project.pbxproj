@@ -7,15 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72247B071A7ECD3200577FDC /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72247B061A7ECD3200577FDC /* Device.swift */; };
+		7267F5651A7EDE80003BFAD8 /* DeviceListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267F5641A7EDE80003BFAD8 /* DeviceListTVC.swift */; };
 		C31F8F221A66A778003B25B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31F8F211A66A778003B25B0 /* AppDelegate.swift */; };
-		C31F8F271A66A778003B25B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C31F8F251A66A778003B25B0 /* Main.storyboard */; };
 		C31F8F291A66A778003B25B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C31F8F281A66A778003B25B0 /* Images.xcassets */; };
 		C31F8F2C1A66A778003B25B0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31F8F2A1A66A778003B25B0 /* LaunchScreen.xib */; };
 		C31F8F381A66A778003B25B0 /* SmartHomeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31F8F371A66A778003B25B0 /* SmartHomeAppTests.swift */; };
 		C31F8F461A66AE93003B25B0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31F8F451A66AE93003B25B0 /* LoginVC.swift */; };
 		C34C65471A7150D800E603C1 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C65461A7150D800E603C1 /* MenuVC.swift */; };
-		C37AC9D21A7923CB003EA563 /* HTTPS_Request.m in Sources */ = {isa = PBXBuildFile; fileRef = C37AC9D11A7923CB003EA563 /* HTTPS_Request.m */; };
-		C37AC9D51A7930DE003EA563 /* DeviceTVCTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37AC9D41A7930DE003EA563 /* DeviceTVCTableViewController.swift */; };
+		C36F96391A7A497F0007DAF9 /* HTTPS_Sender.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F96381A7A497F0007DAF9 /* HTTPS_Sender.m */; };
+		C36F963C1A7A94E40007DAF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36F963A1A7A94E40007DAF9 /* Main.storyboard */; };
+		C3A1BE1C1A7FE6520067E71F /* DeviceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A1BE1B1A7FE6520067E71F /* DeviceDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,10 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		72247B061A7ECD3200577FDC /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		7267F5641A7EDE80003BFAD8 /* DeviceListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceListTVC.swift; sourceTree = "<group>"; };
 		C31F8F1C1A66A778003B25B0 /* SmartHomeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartHomeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C31F8F201A66A778003B25B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C31F8F211A66A778003B25B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C31F8F261A66A778003B25B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C31F8F281A66A778003B25B0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C31F8F2B1A66A778003B25B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C31F8F311A66A778003B25B0 /* SmartHomeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SmartHomeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,10 +43,10 @@
 		C31F8F371A66A778003B25B0 /* SmartHomeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartHomeAppTests.swift; sourceTree = "<group>"; };
 		C31F8F451A66AE93003B25B0 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C34C65461A7150D800E603C1 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
+		C36F96381A7A497F0007DAF9 /* HTTPS_Sender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPS_Sender.m; sourceTree = "<group>"; };
+		C36F963B1A7A94E40007DAF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C37AC9CE1A79218D003EA563 /* SmartHomeApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartHomeApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		C37AC9D11A7923CB003EA563 /* HTTPS_Request.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPS_Request.m; sourceTree = "<group>"; };
-		C37AC9D31A792B3B003EA563 /* HTTPS_Request.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPS_Request.h; sourceTree = "<group>"; };
-		C37AC9D41A7930DE003EA563 /* DeviceTVCTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceTVCTableViewController.swift; sourceTree = "<group>"; };
+		C3A1BE1B1A7FE6520067E71F /* DeviceDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,13 +89,15 @@
 			isa = PBXGroup;
 			children = (
 				C31F8F211A66A778003B25B0 /* AppDelegate.swift */,
-				C31F8F251A66A778003B25B0 /* Main.storyboard */,
+				C36F963A1A7A94E40007DAF9 /* Main.storyboard */,
 				C31F8F281A66A778003B25B0 /* Images.xcassets */,
 				C31F8F2A1A66A778003B25B0 /* LaunchScreen.xib */,
 				C31F8F1F1A66A778003B25B0 /* Supporting Files */,
 				C31F8F451A66AE93003B25B0 /* LoginVC.swift */,
 				C34C65461A7150D800E603C1 /* MenuVC.swift */,
-				C37AC9D41A7930DE003EA563 /* DeviceTVCTableViewController.swift */,
+				72247B061A7ECD3200577FDC /* Device.swift */,
+				7267F5641A7EDE80003BFAD8 /* DeviceListTVC.swift */,
+				C3A1BE1B1A7FE6520067E71F /* DeviceDetailsVC.swift */,
 			);
 			path = SmartHomeApp;
 			sourceTree = "<group>";
@@ -100,10 +105,9 @@
 		C31F8F1F1A66A778003B25B0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C36F96381A7A497F0007DAF9 /* HTTPS_Sender.m */,
 				C31F8F201A66A778003B25B0 /* Info.plist */,
 				C37AC9CE1A79218D003EA563 /* SmartHomeApp-Bridging-Header.h */,
-				C37AC9D11A7923CB003EA563 /* HTTPS_Request.m */,
-				C37AC9D31A792B3B003EA563 /* HTTPS_Request.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -206,7 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C31F8F271A66A778003B25B0 /* Main.storyboard in Resources */,
+				C36F963C1A7A94E40007DAF9 /* Main.storyboard in Resources */,
 				C31F8F2C1A66A778003B25B0 /* LaunchScreen.xib in Resources */,
 				C31F8F291A66A778003B25B0 /* Images.xcassets in Resources */,
 			);
@@ -226,10 +230,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36F96391A7A497F0007DAF9 /* HTTPS_Sender.m in Sources */,
+				7267F5651A7EDE80003BFAD8 /* DeviceListTVC.swift in Sources */,
 				C31F8F461A66AE93003B25B0 /* LoginVC.swift in Sources */,
-				C37AC9D21A7923CB003EA563 /* HTTPS_Request.m in Sources */,
 				C31F8F221A66A778003B25B0 /* AppDelegate.swift in Sources */,
-				C37AC9D51A7930DE003EA563 /* DeviceTVCTableViewController.swift in Sources */,
+				72247B071A7ECD3200577FDC /* Device.swift in Sources */,
+				C3A1BE1C1A7FE6520067E71F /* DeviceDetailsVC.swift in Sources */,
 				C34C65471A7150D800E603C1 /* MenuVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,20 +259,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C31F8F251A66A778003B25B0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C31F8F261A66A778003B25B0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C31F8F2A1A66A778003B25B0 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C31F8F2B1A66A778003B25B0 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		C36F963A1A7A94E40007DAF9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C36F963B1A7A94E40007DAF9 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

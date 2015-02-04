@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="Ris-XJ-a9E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -8,17 +8,18 @@
         <scene sceneID="RTk-U0-mX5">
             <objects>
                 <navigationController id="Ris-XJ-a9E" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="kPu-yw-mC0"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="f83-Tj-iUb">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="izg-1j-k5K"/>
+                        <segue destination="BZF-XQ-65Y" kind="relationship" relationship="rootViewController" id="Qot-Zh-LTf"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P2y-5c-RZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-814" y="768"/>
+            <point key="canvasLocation" x="-156" y="1344"/>
         </scene>
         <!--Login-->
         <scene sceneID="tne-QT-ifu">
@@ -75,14 +76,19 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUz-3f-l7B">
-                                <rect key="frame" x="234" y="802" width="300" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cUz-3f-l7B">
+                                <rect key="frame" x="277" y="787" width="215" height="47"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" red="0.92926290759999997" green="0.92926290759999997" blue="0.92926290759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" backgroundImage="BlackButton">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Login">
+                                            <attributes>
+                                                <color key="NSColor" red="0.64910799040211808" green="1" blue="0.83975124985611838" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="15" name="HelveticaNeue-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Cva-jC-VLY"/>
@@ -101,12 +107,12 @@
                         <outlet property="checkUserLabel" destination="gtL-Rv-6hz" id="wyj-ab-dsB"/>
                         <outlet property="textFieldPassword" destination="G6B-w8-fDc" id="CyO-F4-DsP"/>
                         <outlet property="textFieldUsername" destination="d2f-ZN-Y1D" id="yFK-Ft-uMH"/>
-                        <segue destination="BZF-XQ-65Y" kind="push" identifier="goto_Menu" id="kkR-SM-6ky"/>
+                        <segue destination="Ris-XJ-a9E" kind="modal" identifier="goto_Menu" id="pKs-85-hqJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="118" y="773"/>
+            <point key="canvasLocation" x="-454" y="107"/>
         </scene>
         <!--Menu-->
         <scene sceneID="xWi-wu-DNh">
@@ -120,45 +126,159 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTh-MX-3pz">
-                                <rect key="frame" x="137" y="175" width="128" height="128"/>
-                                <state key="normal" image="IconFolderOption">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="VG0-Nf-jnd">
+                                <rect key="frame" x="507" y="797" width="158" height="170"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="30"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Qs0-fb-0w5" kind="push" id="ZTA-yy-86q"/>
-                                </connections>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FCO-7v-muJ">
-                                <rect key="frame" x="305" y="175" width="128" height="128"/>
-                                <state key="normal" image="IconFolder">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Az8-3Z-xA0">
+                                <rect key="frame" x="307" y="797" width="158" height="170"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="30"/>
+                                <state key="normal" title="My Settings">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Ecj-kA-N7k">
+                                <rect key="frame" x="103" y="797" width="158" height="170"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="30"/>
+                                <state key="normal" title="My Users">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="GVl-uf-Ghn">
+                                <rect key="frame" x="103" y="116" width="158" height="170"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="30"/>
+                                <state key="normal" title="My Rooms">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="8H0-MU-e3r" kind="push" id="Lri-RL-12R"/>
+                                    <segue destination="8H0-MU-e3r" kind="push" id="fDh-Ni-Z37"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Devices" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aE-tv-cy2">
-                                <rect key="frame" x="137" y="282" width="128" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sonstiges" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oy-DV-oxI">
-                                <rect key="frame" x="305" y="282" width="128" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8U2-CL-6tt">
+                                <rect key="frame" x="507" y="116" width="158" height="170"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="30"/>
+                                <state key="normal" title="My Devices">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="iQd-Il-Gju" kind="push" id="O7Y-8b-eCg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="n0D-Qy-0fV">
+                                <rect key="frame" x="305" y="116" width="158" height="170"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="30"/>
+                                <state key="normal" title="My Scenarios">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.1176036672" green="0.23432268340000001" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.50196081399917603" green="0.33207058208809731" blue="0.086797164391059806" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="88d-02-36Z"/>
+                    <connections>
+                        <outlet property="logoutButton" destination="VG0-Nf-jnd" id="7Qp-zR-NR1"/>
+                        <outlet property="myDevicesButton" destination="8U2-CL-6tt" id="QsX-CA-TRX"/>
+                        <outlet property="myRoomsButton" destination="GVl-uf-Ghn" id="QKh-aY-lqz"/>
+                        <outlet property="myScenariosButton" destination="n0D-Qy-0fV" id="LGx-y3-5Pw"/>
+                        <outlet property="mySettingsButton" destination="Az8-3Z-xA0" id="6o6-Qy-2rz"/>
+                        <outlet property="myUsersButton" destination="Ecj-kA-N7k" id="cWf-OW-lPW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17X-J4-6dq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1018" y="768"/>
+            <point key="canvasLocation" x="898" y="756"/>
+        </scene>
+        <!--List of Devices-->
+        <scene sceneID="AZm-Yx-pz7">
+            <objects>
+                <tableViewController id="iQd-Il-Gju" customClass="DeviceListTVC" customModule="SmartHomeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="90" sectionFooterHeight="1" id="vqI-bQ-kS6">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="center" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cells" textLabel="FDM-S7-Whi" rowHeight="104" style="IBUITableViewCellStyleDefault" id="1vQ-Eu-e35">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1vQ-Eu-e35" id="Gqb-H1-cXj">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FDM-S7-Whi">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="EvR-8g-KXH" kind="push" identifier="goto_DeviceDetails" id="fkq-o6-wEN"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="iQd-Il-Gju" id="rz9-R4-Qnm"/>
+                            <outlet property="delegate" destination="iQd-Il-Gju" id="F7x-qI-uc5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="List of Devices" id="wvJ-Yv-pYZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="JOL-b0-Y4a">
+                            <connections>
+                                <action selector="addDevice:" destination="iQd-Il-Gju" id="GJh-rN-65f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="zRK-4T-8ek" kind="modal" identifier="addDevice" id="dsb-Nb-hA6"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="egN-YV-Srg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2867" y="-350"/>
         </scene>
         <!--Sonstiges-->
         <scene sceneID="Kb8-bF-9Es">
@@ -171,6 +291,11 @@
                     <view key="view" contentMode="scaleToFill" id="YHt-2m-8HA">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.44999999999999962" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MenuBackground" translatesAutoresizingMaskIntoConstraints="NO" id="ItK-bP-Oy2">
+                                <rect key="frame" x="0.0" y="44" width="768" height="1024"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="0.27855939799002882" green="1" blue="0.67180434824233592" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="0WQ-F3-hGM"/>
@@ -179,64 +304,158 @@
             </objects>
             <point key="canvasLocation" x="1928" y="756"/>
         </scene>
-        <!--DeviceTVC Table View Controller-->
-        <scene sceneID="mtp-Q9-bM2">
+        <!--New Device-->
+        <scene sceneID="nEB-Wo-m7O">
             <objects>
-                <tableViewController id="Qs0-fb-0w5" customClass="DeviceTVCTableViewController" customModule="SmartHomeApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="63x-F2-Nd2">
+                <viewController title="New Device" id="Jvr-Gw-sHT" customClass="DeviceDetailsVC" customModule="SmartHomeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yT3-1V-vK3"/>
+                        <viewControllerLayoutGuide type="bottom" id="rHQ-L3-PuB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GhT-Wa-ciQ">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UcM-sy-Vuh">
+                                <rect key="frame" x="339" y="226" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jpP-IG-CRu">
+                                <rect key="frame" x="339" y="308" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9a3-qG-wbv">
+                                <rect key="frame" x="129" y="226" width="137" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serial number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHv-Jr-nzk">
+                                <rect key="frame" x="129" y="308" width="137" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dis-QA-Yjc">
+                                <rect key="frame" x="339" y="357" width="300" height="162"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a room" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aod-eE-EXK">
+                                <rect key="frame" x="129" y="426" width="137" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New Device" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MN9-6S-PUO">
+                                <rect key="frame" x="289" y="71" width="190" height="56"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <navigationBar key="tableFooterView" contentMode="scaleToFill" id="7zn-Hp-oLJ">
-                            <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <items>
-                                <navigationItem title="List of Devices" id="fZX-bg-HKH">
-                                    <barButtonItem key="rightBarButtonItem" systemItem="add" id="1EZ-5o-7kC">
-                                        <connections>
-                                            <action selector="addNewData:" destination="Qs0-fb-0w5" id="ytk-7S-p0O"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </navigationItem>
-                            </items>
-                        </navigationBar>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="2ZY-mg-cBJ" style="IBUITableViewCellStyleDefault" id="0TC-wr-3fb">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0TC-wr-3fb" id="uU9-JX-yxK">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2ZY-mg-cBJ">
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Qs0-fb-0w5" id="NRX-of-FUB"/>
-                            <outlet property="delegate" destination="Qs0-fb-0w5" id="PEy-lU-kse"/>
-                        </connections>
-                    </tableView>
-                    <toolbarItems>
-                        <barButtonItem title="Item" id="9Rf-Lp-u0U"/>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" id="lRm-5Z-NQH"/>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wFb-7g-0wd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="F3Q-tn-hr5"/>
+                    <connections>
+                        <outlet property="devicenameTextField" destination="UcM-sy-Vuh" id="FMF-4x-MRt"/>
+                        <outlet property="headerLabel" destination="MN9-6S-PUO" id="e10-s0-H3W"/>
+                        <outlet property="roomPickerView" destination="Dis-QA-Yjc" id="TI4-W0-Zve"/>
+                        <outlet property="serialnumberTextField" destination="jpP-IG-CRu" id="i1h-cv-yRw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gOp-PH-7EX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2346" y="-398"/>
+            <point key="canvasLocation" x="4646" y="231"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Op6-ES-KlB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zRK-4T-8ek" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="0yZ-wh-GGa"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sEc-Ec-avO">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Jvr-Gw-sHT" kind="relationship" relationship="rootViewController" id="C4g-eP-nEE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dRg-OQ-nCp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3793" y="231"/>
+        </scene>
+        <!--Device Details-->
+        <scene sceneID="fUp-Ng-ovK">
+            <objects>
+                <viewController title="Device Details" id="EvR-8g-KXH" customClass="DeviceDetailsVC" customModule="SmartHomeApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BU4-kp-p3U"/>
+                        <viewControllerLayoutGuide type="bottom" id="8GT-6o-rDJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2gr-xy-Js8">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aia-eH-mHa">
+                                <rect key="frame" x="339" y="226" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eKm-FU-KNY">
+                                <rect key="frame" x="339" y="308" width="300" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bkc-Ar-8sC">
+                                <rect key="frame" x="129" y="226" width="137" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Serial number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7nb-xu-cLa">
+                                <rect key="frame" x="129" y="308" width="137" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T1R-sT-DHc">
+                                <rect key="frame" x="339" y="357" width="300" height="162"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a room" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GW6-YO-Y6Q">
+                                <rect key="frame" x="129" y="426" width="137" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Device Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Og-pm-Zb3">
+                                <rect key="frame" x="289" y="71" width="190" height="56"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="K8B-Ub-qex"/>
+                    <connections>
+                        <outlet property="devicenameTextField" destination="Aia-eH-mHa" id="Sk0-KM-NGO"/>
+                        <outlet property="headerLabel" destination="3Og-pm-Zb3" id="0d3-M0-yuf"/>
+                        <outlet property="roomPickerView" destination="T1R-sT-DHc" id="apj-2V-iv9"/>
+                        <outlet property="serialnumberTextField" destination="eKm-FU-KNY" id="Iw9-hb-l8W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xVX-m2-fQx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3793" y="-874"/>
         </scene>
     </scenes>
     <resources>
-        <image name="IconFolder" width="128" height="128"/>
-        <image name="IconFolderOption" width="128" height="128"/>
+        <image name="BlackButton" width="196" height="55"/>
         <image name="LogoUni" width="1730" height="320"/>
+        <image name="MenuBackground" width="3393" height="2867"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

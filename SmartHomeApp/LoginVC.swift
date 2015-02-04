@@ -28,6 +28,8 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        textFieldUsername.text = "jan"
+        textFieldPassword.text = "123"
         // Do any additional setup after loading the view.
     }
 

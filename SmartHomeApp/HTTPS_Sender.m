@@ -1,33 +1,29 @@
 //
-//  HTTPS_Request.m
-//  SmartHomeApp
+//  HTTPS_Sender.m
+//  HTTPS_Request_3
 //
-//  Created by MacMini-02 on 28/01/15.
-//  Copyright (c) 2015 Uni Mannheim. All rights reserved.
+//  Created by Kay E on 28.01.15.
+//  Copyright (c) 2015 Kay.E. All rights reserved.
 //
 
 
-#import "HTTPS_Request.h"
+#import <Foundation/Foundation.h>
 
-@interface ViewController ()
-
-@end
 
 @interface NSURLRequest (DummyInterface)
 + (BOOL)allowsAnyHTTPSCertificateForHost:(NSString*)host;
 + (void)setAllowsAnyHTTPSCertificate:(BOOL)allow forHost:(NSString*)host;
 @end
 
-@implementation ViewController
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    NSString *mPostData = @"{\"method\":\"Info.Get_JSON_HTTPS_Server_Info\",\"params\"{\"IP\":\"??\"}}";
-    NSString *mReplyData =[self SendHTTPS_POST:mPostData];
-    NSLog(@"mReplyData: %@", mReplyData);
-}
 
+
+@interface HTTPS_Sender : NSObject
+
+
+@end
+
+
+@implementation HTTPS_Sender
 
 - (NSString*)SendHTTPS_POST:(NSString*)mPostData{
     
@@ -61,10 +57,8 @@
     
 }
 
-
-
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
+    // [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
