@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "idiom" : "universal",
+      "scale" : "1x",
+      "filename" : "HomeMatic-Funk-Heizkoerperthermostat-HM-CC-RT-DN-105155-68-1051-55_b_0.JPG"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x",
+      "filename" : "HomeMatic-Funk-Heizkoerperthermostat-HM-CC-RT-DN-105155-68-1051-55_b_0-1.JPG"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x",
+      "filename" : "HomeMatic-Funk-Heizkoerperthermostat-HM-CC-RT-DN-105155-68-1051-55_b_0-2.JPG"
+    }
+  ],
+  "info" : {
+    "version" : 1,
+    "author" : "xcode"
+  }
+}

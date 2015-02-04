@@ -17,6 +17,7 @@
 		C34C65471A7150D800E603C1 /* MenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34C65461A7150D800E603C1 /* MenuVC.swift */; };
 		C36F96391A7A497F0007DAF9 /* HTTPS_Sender.m in Sources */ = {isa = PBXBuildFile; fileRef = C36F96381A7A497F0007DAF9 /* HTTPS_Sender.m */; };
 		C36F963C1A7A94E40007DAF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36F963A1A7A94E40007DAF9 /* Main.storyboard */; };
+		C374330D1A8271BF008E468A /* RoomListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C374330C1A8271BF008E468A /* RoomListTVC.swift */; };
 		C3A1BE1C1A7FE6520067E71F /* DeviceDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3A1BE1B1A7FE6520067E71F /* DeviceDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +46,7 @@
 		C34C65461A7150D800E603C1 /* MenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuVC.swift; sourceTree = "<group>"; };
 		C36F96381A7A497F0007DAF9 /* HTTPS_Sender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPS_Sender.m; sourceTree = "<group>"; };
 		C36F963B1A7A94E40007DAF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C374330C1A8271BF008E468A /* RoomListTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomListTVC.swift; sourceTree = "<group>"; };
 		C37AC9CE1A79218D003EA563 /* SmartHomeApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmartHomeApp-Bridging-Header.h"; sourceTree = "<group>"; };
 		C3A1BE1B1A7FE6520067E71F /* DeviceDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +100,7 @@
 				72247B061A7ECD3200577FDC /* Device.swift */,
 				7267F5641A7EDE80003BFAD8 /* DeviceListTVC.swift */,
 				C3A1BE1B1A7FE6520067E71F /* DeviceDetailsVC.swift */,
+				C374330C1A8271BF008E468A /* RoomListTVC.swift */,
 			);
 			path = SmartHomeApp;
 			sourceTree = "<group>";
@@ -232,6 +235,7 @@
 			files = (
 				C36F96391A7A497F0007DAF9 /* HTTPS_Sender.m in Sources */,
 				7267F5651A7EDE80003BFAD8 /* DeviceListTVC.swift in Sources */,
+				C374330D1A8271BF008E468A /* RoomListTVC.swift in Sources */,
 				C31F8F461A66AE93003B25B0 /* LoginVC.swift in Sources */,
 				C31F8F221A66A778003B25B0 /* AppDelegate.swift in Sources */,
 				72247B071A7ECD3200577FDC /* Device.swift in Sources */,

@@ -8,11 +8,20 @@
 
 import UIKit
 
-class DeviceDetailsVC: UIViewController {
+protocol DeviceDetailsVCDelegate{
+    func didAddDevice (device:Device)
+    func didChangeDevice(device:Device, atRow:Int)
+    
+}
 
+class DeviceDetailsVC: UIViewController {
+    
+    
+    var delegate: DeviceDetailsVCDelegate?
     var daten: Device?
     var string: String!
     var editingEnabled = false
+    var row: Int?
     
     
     @IBOutlet weak var headerLabel: UILabel!
@@ -50,17 +59,21 @@ class DeviceDetailsVC: UIViewController {
     }
     
     func save(){
+        
         var newDevice = Device(name: devicenameTextField.text, serialNumber: serialnumberTextField.text, room: "default")
         presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+        delegate?.didAddDevice(newDevice)
         
     }
 
     func editing (){
         switch editingEnabled {
         case true:
+            delegate?.didChangeDevice(Device(name: devicenameTextField.text, serialNumber: serialnumberTextField.text, room: "default"), atRow: row!)
             navigationItem.rightBarButtonItem?.title = "edit"
         default:
             navigationItem.rightBarButtonItem?.title = "done"
+            
         }
         editingEnabled = !editingEnabled
         enableAllTextFields(editingEnabled)
@@ -73,7 +86,5 @@ class DeviceDetailsVC: UIViewController {
         
     }
     
-
-
 
 }

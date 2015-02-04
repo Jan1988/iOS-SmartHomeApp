@@ -8,11 +8,13 @@
 
 import UIKit
 
-class DeviceListTVC: UITableViewController {
+
+
+class DeviceListTVC: UITableViewController, DeviceDetailsVCDelegate {
     
     
     
-    
+
     var daten = [Device]()
     
     @IBAction func addDevice(sender: UIBarButtonItem) {
@@ -24,7 +26,7 @@ class DeviceListTVC: UITableViewController {
     override func  viewDidLoad() {
         let testDevice1 = Device(name: "Heating Sensor", serialNumber: "001", room: "Kitchen")
         daten += [testDevice1]
-        println(daten[0].name)
+        
     }
     
 
@@ -39,6 +41,9 @@ class DeviceListTVC: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cells") as UITableViewCell
         
         cell.textLabel.text = "\(daten[indexPath.row].room): \(daten[indexPath.row].name)"
+        
+        var imageInCells = UIImage(named: "Heating Sensor")
+        cell.imageView.image = imageInCells
         return cell
     }
     
@@ -46,16 +51,28 @@ class DeviceListTVC: UITableViewController {
         if segue.identifier == "goto_DeviceDetails"{
             let row = tableView.indexPathForCell(sender as UITableViewCell)?.row
             (segue.destinationViewController as DeviceDetailsVC).daten = daten[row!]
+            (segue.destinationViewController as DeviceDetailsVC).row = row
+            (segue.destinationViewController as DeviceDetailsVC).delegate = self
 
         }else if segue.identifier == "addDevice"{
-            //segue wird ausgeführt
+            ((segue.destinationViewController as UINavigationController).viewControllers[0] as DeviceDetailsVC).delegate = self
+            
 
         }
     }
     
+     func didAddDevice(device: Device) {
+        
+        daten += [device]
+        tableView.reloadData()
+        
+    }
 
-
-
+    func didChangeDevice(device: Device, atRow: Int) {
+        
+        daten[atRow] = device
+        tableView.reloadData()
+    }
     
 }
 
